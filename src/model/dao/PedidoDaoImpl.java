@@ -18,7 +18,7 @@ public class PedidoDaoImpl implements PedidoDao{
 	public List<Pedido> getPedidos(Pedido pedido) {
 		StringBuffer hql = new StringBuffer("from Pedido p" + " where 1 = 1");		
 		if (pedido.getIdPedido() != null) {
-			hql.append(" and c.idPedido = :idPedido");
+			hql.append(" and p.idPedido = :idPedido");
 		}
 		Query query = entityManager.createQuery(hql.toString());
 		if (pedido.getIdPedido() != null) {
@@ -44,7 +44,7 @@ public class PedidoDaoImpl implements PedidoDao{
 	@Override
 	@Transactional
 	public Pedido salvar(Pedido pedido) {
-		entityManager.persist(pedido);
+		entityManager.merge(pedido);
 		return pedido;
 	}
 	

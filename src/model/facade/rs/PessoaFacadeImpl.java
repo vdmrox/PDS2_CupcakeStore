@@ -33,7 +33,7 @@ public class PessoaFacadeImpl implements PessoaFacade{
 	
 	@Override
 	@GET
-	@Path("/{idPedido}")
+	@Path("/{idPessoa}")
 	public List<Pessoa> getPessoas(@PathParam("idPessoa") Integer idPessoa){
 		Pessoa pessoa = new Pessoa();
 		pessoa.setIdPessoa(idPessoa);
@@ -55,7 +55,7 @@ public class PessoaFacadeImpl implements PessoaFacade{
 	
 	@Override
 	@DELETE
-	@Path("{/idPessoa}")
+	@Path("/{idPessoa}")
 	public void deletarPessoa(@PathParam("idPessoa") Integer idPessoa){
 		Pessoa pessoa = new Pessoa();
 		pessoa.setIdPessoa(idPessoa);

@@ -55,7 +55,7 @@ public class SaborFacadeImpl implements SaborFacade{
 	
 	@Override
 	@DELETE
-	@Path("{/idSabor}")
+	@Path("/{idSabor}")
 	public void deletarSabor(@PathParam("idSabor") Integer idSabor){
 		Sabor sabor = new Sabor();
 		sabor.setIdSabor(idSabor);

@@ -19,7 +19,7 @@ public class PessoaDaoImpl implements PessoaDao{
 	public List<Pessoa> getPessoas(Pessoa pessoa) {
 		StringBuffer hql = new StringBuffer("from Pessoa p" + " where 1 = 1");		
 		if (pessoa.getIdPessoa() != null) {
-			hql.append(" and c.idPessoa = :idPessoa");
+			hql.append(" and p.idPessoa = :idPessoa");
 		}
 		Query query = entityManager.createQuery(hql.toString());
 		if (pessoa.getIdPessoa() != null) {
@@ -36,12 +36,14 @@ public class PessoaDaoImpl implements PessoaDao{
 	}
 
 	@Override
+	@Transactional
 	public void atualizar(Pessoa pessoa) {
 		pessoa = entityManager.merge(pessoa);
 		entityManager.persist(pessoa);
 	}
 
 	@Override
+	@Transactional
 	public Pessoa salvar(Pessoa pessoa) {
 		entityManager.persist(pessoa);
 		return pessoa;

@@ -18,7 +18,7 @@ public class SaborDaoImpl implements SaborDao{
 	public List<Sabor> getSabores(Sabor sabor) {
 		StringBuffer hql = new StringBuffer("from Sabor s" + " where 1 = 1");		
 		if (sabor.getIdSabor() != null) {
-			hql.append(" and c.idSabor = :idSabor");
+			hql.append(" and s.idSabor = :idSabor");
 		}
 		Query query = entityManager.createQuery(hql.toString());
 		if (sabor.getIdSabor() != null) {

@@ -55,7 +55,7 @@ public class PedidoFacadeImpl implements PedidoFacade{
 	
 	@Override
 	@DELETE
-	@Path("{/idPedido}")
+	@Path("/{idPedido}")
 	public void deletarPedido(@PathParam("idPedido") Integer idPedido){
 		Pedido pedido = new Pedido();
 		pedido.setIdPedido(idPedido);
