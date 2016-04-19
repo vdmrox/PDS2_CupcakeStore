@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 
 import model.dao.PessoaDao;
@@ -21,7 +22,9 @@ public class PessoaFacadeImpl {
 	}
 	
 	@WebMethod(operationName="getPessoasParametro")
-	public List<Pessoa> getPedidos(Pessoa pessoa) {
+	public List<Pessoa> getPedidos(@WebParam(name="idPessoa")Integer idPessoa) {
+		Pessoa pessoa = new Pessoa();
+		pessoa.setIdPessoa(idPessoa);
 		return pessoaDao.getPessoas(pessoa);
 	}
 	
