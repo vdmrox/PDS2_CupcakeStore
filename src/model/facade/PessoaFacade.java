@@ -8,9 +8,9 @@ public interface PessoaFacade {
 	
 	List<Pessoa> getPessoas();
 
-	List<Pessoa> getPessoas(Integer idPessoa);
+	List<Pessoa> getPessoas(Integer id);
 
-	void deletarPessoa(Integer idPessoa);
+	void deletarPessoa(Integer id);
 
 	Pessoa salvar(Pessoa pessoa);
 
