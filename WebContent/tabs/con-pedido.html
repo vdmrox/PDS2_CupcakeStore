@@ -1,0 +1,22 @@
+<div class="table-responsive mt-20">
+	<table class="table table-striped table-report">
+		<tr>
+			<th>Código Pedido</th>
+			<th>Data Pedido</th>
+			<th>Pessoa</th>
+			<th>Tipo Pessoa</th>
+			<th>Cidade</th>
+			<th>Editar</th>
+		</tr>
+		<tr ng-repeat="pedidoReg in pedidoCtrl.pedidos"></a>
+			<td>{{pedidoReg.idPedido}}</td>
+			<td>{{pedidoReg.data | date: 'dd-MM-yyyy'}}</td>
+			<td>{{pedidoReg.pessoa.nome}}</td>
+			<td>{{pedidoReg.pessoa.tipoPessoa}}</td>
+			<td>{{pedidoReg.pessoa.cidade}}</td>
+			<td>
+				<button class="btn btn-default" title="Deletar" ng-click="pedidoCtrl.remove(pedidoReg);"><i class="glyphicon glyphicon-remove"></i></button>
+			</td>
+		</tr>
+	</table>
+</div>

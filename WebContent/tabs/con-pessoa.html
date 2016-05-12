@@ -1,0 +1,23 @@
+<div class="table-responsive mt-20">
+	<table class="table table-striped table-report">
+		<tr>
+			<th>Código</th>
+			<th>Tipo</th>
+			<th>Nome</th>
+			<th>Cidade</th>
+			<th>UF</th>
+			<th>Editar</th>
+		</tr>
+		<tr ng-repeat="pessoaReg in pessoaCtrl.pessoas"></a>
+			<td>{{pessoaReg.idPessoa}}</td>
+			<td>{{pessoaReg.tipoPessoa}}</td>
+			<td>{{pessoaReg.nome}}</td>
+			<td>{{pessoaReg.cidade}}</td>
+			<td>{{pessoaReg.uf}}</td>
+			<td>
+				<button class="btn btn-default" title="Editar" ng-click="pessoaCtrl.edit(pessoaReg);"><i class="glyphicon glyphicon-edit"></i></button>
+				<button class="btn btn-default" title="Deletar" ng-click="pessoaCtrl.remove(pessoaReg);"><i class="glyphicon glyphicon-remove"></i></button>
+			</td>
+		</tr>
+	</table>
+</div>

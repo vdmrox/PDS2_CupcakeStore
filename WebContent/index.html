@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cupcakeApp">
+<head>
+	<link rel="stylesheet" href="css/myStyle.css">
+    <link rel="stylesheet" href="css/helpers.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<meta charset="UTF-8">
+	<title>Cupcake Store</title>
+</head>
+<body ng-controller="HomeController">
+
+<div class="container-fluid no-padding">
+    <div class="row">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="col-sm-2">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <div class="logo">
+                        <a href="#/">
+                            <img src="img/cupcake-icon.png" alt="cupcake">
+                            <p>Cupcake Store</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a ui-sref="home">Home</a>
+                </li>
+                <li>
+                    <a ui-sref="consulta.pessoa">Visualizar Dados</a>
+                </li>
+                <li>
+                    <a ui-sref="cadastro.pessoa">Cadastrar Dados</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /Sidebar -->
+
+        <!-- Page-Content -->
+        <div id="main" class="main col-sm-10">
+            <div ui-view></div>
+        </div>
+        <!-- /Page-Content -->
+
+        <div class="footer container">
+            
+        </div>
+        
+    </div>
+
+</div>
+    
+<!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="js/ui-bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/service/service.js"></script>
+    <script src="js/config/state-config.js"></script>
+    <script src="js/controller/modal-ctrl.js"></script>
+    <script src="js/controller/home-ctrl.js"></script>
+    <script src="js/controller/pessoa-ctrl.js"></script>
+    <script src="js/controller/sabor-ctrl.js"></script>
+    <script src="js/controller/pedido-ctrl.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="table-responsive mt-20">
+	<table class="table table-striped table-report">
+		<tr>
+			<th>Código</th>
+			<th>Sabor</th>
+			<th>Valor R$</th>
+			<th>Editar</th>
+		</tr>
+		<tr ng-repeat="saborReg in saborCtrl.sabores"></a>
+			<td>{{saborReg.idSabor}}</td>
+			<td>{{saborReg.description}}</td>
+			<td>{{saborReg.price}}</td>
+			<td>
+				<button class="btn btn-default" title="Editar" ng-click="saborCtrl.edit(saborReg);"><i class="glyphicon glyphicon-edit"></i></button>
+				<button class="btn btn-default" title="Deletar" ng-click="saborCtrl.remove(saborReg);"><i class="glyphicon glyphicon-remove"></i></button>
+			</td>
+		</tr>
+	</table>
+</div>

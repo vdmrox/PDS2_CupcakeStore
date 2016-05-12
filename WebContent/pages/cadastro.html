@@ -1,0 +1,19 @@
+<!-- cadastro.html -->
+    <div class="header">
+        <h1>Cupcake Store - Cadastro</h1>
+        <hr>
+		<ol class="breadcrumb">
+		  <li><a ui-sref="home">Home</a></li>
+		  <li><a ui-sref="cadastro.pessoa">Cadastrar Dados</a></li>
+		  <li class="active">{{tab}}</li>
+		</ol>
+        <h3>Selecione uma das abas para efetuar o cadastro do respectivo item:</h3><br>
+			<div class="nav">
+				<ul class="nav nav-tabs" role="tablist">
+            		<li role="presentation" ui-sref-active="active"><a ui-sref=".pessoa">Pessoa</a></li>
+            		<li role="presentation" ui-sref-active="active"><a ui-sref=".sabor">Sabor</a></li>
+            		<li role="presentation" ui-sref-active="active"><a ui-sref=".pedido">Pedido</a></li>
+         	 	</ul>
+			</div>
+			<div ui-view></div>
+    </div>

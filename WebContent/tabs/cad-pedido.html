@@ -1,0 +1,29 @@
+<!-- Cadastro Pedido -->
+
+<div class="tab-content row">
+	<div class="col-sm-4">
+		<div class="mt-20 mb-20">
+			<form>
+				<div class="form-group">
+					<label for="codigo">Pessoa</label>
+					<div>
+						<div class="btn-group" uib-dropdown is-open="status.isopen">
+						  <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">
+						    {{pedidoCtrl.dropLabel}} <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+						    <li role="menuitem" ng-repeat="option in pedidoCtrl.options" ng-click="pedidoCtrl.selectPessoa(option);"><a href="">{{option.id}} - {{option.nome}}</a></li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="nome">Data do Pedido</label>
+					<input type="date" class="form-control" ng-model="pedidoCtrl.pedido.data" id="dataPedido" placeholder="Data do Pedido">
+				</div>
+
+				<div class="btn btn-primary mt-20 pull-right" ng-click="pedidoCtrl.create();">Salvar</div>
+			</form>
+		</div>		
+	</div>
+</div>
